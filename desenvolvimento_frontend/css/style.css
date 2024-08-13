@@ -72,14 +72,7 @@ table thead th {
   color: #fff;
 }
 
-#pacotes .figuras figure {
-  display: inline-block;
-}
 
 img {
   width: 350px;
 }
-
-#pacotes .figuras, .videos {
-    text-align: center;
-  }
