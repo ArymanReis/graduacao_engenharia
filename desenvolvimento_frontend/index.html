@@ -12,7 +12,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
 </head>
 <body>
-  <header>
+  <header class="container-fluid p-2 bg-warning text-center">
 
     <nav class="navbar navbar-expand-lg bg-warning">
       <div class="container-fluid">
@@ -25,14 +25,18 @@
           <div class="navbar-nav">
             <a class="nav-link" aria-current="page" href="#">Pacotes</a>
             <a class="nav-link" href="#">Taxas</a>
-            <a class="nav-link" href="#">Contatos</a>
+            <a class="nav-link" href="#">Faça já seu orçamento</a>
           </div>
         </div>
       </div>
     </nav>
 
+    <h1>Venha Realizar a Viagem Dos Seus Sonhos</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aspernatur laborum officiis, iusto nesciunt ut! Quo odio dignissimos, harum quibusdam dolore rerum, possimus quidem, voluptatum quos quas corrupti blanditiis esse!</p>
+
   </header>
-  <section id="pacotes">
+
+  <section class="container-fluid p-2 bg-light text-center">
     <h2>Conheça nossos pacotes</h2>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, labore tenetur. Quod aliquid minima nihil officiis provident magnam aliquam saepe sed maiores alias corporis perspiciatis eum totam earum, distinctio incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, modi! Maiores fugiat numquam quam rerum repellendus obcaecati consequuntur voluptatibus explicabo ut sit dignissimos officia similique temporibus quasi modi, dolorum ipsam?</p>
     <hr>
@@ -61,18 +65,18 @@
     </div>
   </section>
 
-  <section>
+  <section class="container-fluid bg-warning p-2 text-center">
     <h2>Taxas e Serviços</h2>
     <p>Veja nossas taxas para serviços</p>
-    <table>
+    <table class="table table-warning table-striped table-hover border-warning">
       <caption>Descrição dos serviços e respectivos valores</caption>
-      <thead>
+      <thead class="table-secondary text-center">
         <tr>
           <th>Serviços</th>
           <th>Valor</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="table-group-divider text-center">
         <tr>
           <td>Reserva de Hotel</td>
           <td>R$500</td>
@@ -89,64 +93,64 @@
     </table>
   </section>
 
-  <section>
+  <section class="p-2">
     <h2>Orçamentos</h2>
-    <form action="" method="GET">
+    <form action="" method="GET" class="mb-3">
       <fieldset>
         <legend>Informações de viagem</legend>
 
-        <label>Nome</label> <br>
-        <input type="text" name="name"> <br><br>
+        <div class="mb-3">
+          <label class="form-label" for="name">Nome</label>
+          <input type="text" name="name" id="name" class="form-control">
+        </div>
   
-        <label>E-mail</label><br>
-        <input type="email" name="email" required> <br><br>
+        <div class="mb-3">
+          <label class="form-label" for="email">E-mail</label>
+          <input type="email" name="email" placeholder="Informe seu email" required id="email" class="form-control">
+        </div>
   
-        <label>Data de ida</label> <br>
-        <input type="date" name="dataIda"> <br><br>
-        <label>Data de volta</label> <br>
-        <input type="date" name="dataVolta"> <br><br>
-  
-        <label>Quantidade de pessoas</label> <br>
-        <input type="number" name="qntPessoas"> <br><br>
+        <div class="mb-3">
+          <label class="form-label" for="dataIda">Data de ida</label>
+          <input type="date" name="dataIda" id="dataIda" class="form-control">
+        </div>
+        
+        <div class="mb-3">
+          <label class="form-label" for="dataVolta">Data de Volta</label>
+          <input type="date" name="dataIda" id="dataVolta" class="form-control">
+        </div>
+
       </fieldset>
 
       <fieldset>
-        <legend>Qual serviço deseja contratar</legend><br>
-        <label><input type="checkbox" name="passagens" value="passagens"> Compra de passagens.</label>
-        <label><input type="checkbox" name="hospedagem" value="hospedagem"> Reserva de hospedagem.</label>
-        <label><input type="checkbox" name="reserva" value="reserva"> Reserva de veículos.</label>
+        <legend>Qual serviço deseja contratar</legend>
+        <div class="form-check">
+          <input type="checkbox" name="passagens" value="passagens" class="form-check-input" id="compraPassagens"> 
+          <label class="form-check-label" for="compraPassagens">
+            Compra de Passagens.
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" name="hospedagens" value="Hospedagens" class="form-check-input" id="compraHospedagens"> 
+          <label class="form-check-label" for="compraHospedagens">
+            Compra de Hospedagens.
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" name="veiculos" value="Aluguel de Veículos" class="form-check-input" id="aluguelDeVeiculos"> 
+          <label class="form-check-label" for="aluguelDeVeiculos">
+            Aluguel de Veículos.
+          </label>
+        </div>
+
       </fieldset>
-
-      <fieldset>
-        <legend>Escolha a forma de pagamento</legend>
-        <label>
-          <input type="radio" name="FormaPagamento" value="Cartão de crédito"> Cartão de crédito
-        </label>
-        <label>
-          <input type="radio" name="FormaPagamento" value="Boleto"> Boleto
-        </label>
-        <label>
-          <input type="radio" name="FormaPagamento" value="Pix"> Pix
-        </label>
-      </fieldset>
-
-      <fieldset>
-        <legend>Escolha o prazo de pagamento</legend>
-        <select name="prazoPagamento">
-          <option value="aVista">A vista</option>
-          <option value="5x">5x Sem Juros</option>
-          <option value="10x" selected>10x com Juros</option>
-        </select>
-      </fieldset>
-
-      <label>Comentário</label> <br>
-      <textarea rows="5">Comentário</textarea> <br>
-
-      <button>Salvar</button>
+      <br>
+      <button class="btn btn-secondary p-2">Salvar</button>
     </form>
   </section>
 
-<footer>
+<footer class="container-fluid bg-warning text-center p-2">
   <p>&copy;Desenvolvido por Aryman Reis</p>
 </footer>
 </body>
