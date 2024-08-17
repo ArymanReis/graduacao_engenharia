@@ -42,6 +42,8 @@ nav {
   padding-right: 40px;
 }
 
-img {
-  width: 350px;
+.carousel-caption h5 {
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.699);
 }
