@@ -41,3 +41,33 @@ console.log(arr1);
 
 arr1.pop();
 console.log(arr1);
+
+let array2 = [1, 3, 5, 6, 8, 9];
+
+array2.splice(2, 2),
+
+console.log(array2);
+
+const namesNew = ["João", "Pedro", "Maria", "Ricardo"];
+
+const news = namesNew.splice(1, 1, "Luiz", "Aryman");
+
+console.log(namesNew);
+
+const pais = ["Brasil", "Inglaterra", "Estados Unidos"];
+
+pais.unshift("Uruguai");
+
+console.log(pais);
+
+let person = ["Eduardo", "Aryman", "Abraão", "Bruna"];
+let trainer = ["Marco antônio", "Jussara Peixoto"]
+
+let personTwo = person.slice(3, 4);
+
+console.log(person);
+console.log(personTwo);
+
+let enterprise = person.concat(trainer);
+
+console.log(enterprise);
