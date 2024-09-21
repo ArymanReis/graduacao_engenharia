@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de funcionários</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="system_company.js" defer></script>
+</head>
+<body>
+  <form>
+    <h1>Cadastro de funcionário</h1>
+    <label>Nome:</label>
+    <input type="text" id="employee">
+    
+    <label>Idade:</label>
+    <input type="number" id="age">
+    
+    <label>Cargo:</label>
+    <input type="text" id="position">
+    
+    <label>Depatarmento:</label>
+    <input type="text" id="department">
+    
+    <label>Linguagem de programação:</label>
+    <input type="text" id="linguage">
+
+    <input type="submit" id="send">
+  </form>
+
+  <div id="summary">
+    <h2>Informações do funcionário</h2>
+    <p><!--Dinâmico--></p>
+  </div>
+</body>
+</html>

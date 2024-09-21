@@ -1,3 +1,6 @@
+const button = document.querySelector("#send"); 
+
+
 class Employee {
 
   constructor(name, age, position) {
@@ -23,7 +26,7 @@ class Manager extends Employee {
   }
 
   manage() {
-    console.log("Gerencio o departamento de: " + this.department);
+    console.log(`Meu nome é: ${this.name}, Tenho: ${this.age} anos, sou: ${this.position} do departamento de ${this.department}`);
   }
 }
 
@@ -39,12 +42,27 @@ class Developer extends Employee {
   }
 }
 
-const ManagerSenior = new Employee("Aryman", 38, "Gerente Senior");
 
-const developerSenior = new Developer("Abraão", 20, "Gerente Senior", "JavaScript");
 
-ManagerSenior.introduceYourself();
-ManagerSenior.toWork();
+button.addEventListener("click" , (e) => {
+  e.preventDefault();
+  
+  const userName = document.querySelector("#employee").value;
+  const ageUser = document.querySelector("#age").value;
+  const positionUser = document.querySelector("#position").value;
+  const departmentUser = document.querySelector("#department").value;
+  const linguageProg = document.querySelector("#linguage").value;
 
-developerSenior.program();
+  const developerSenior = new Developer(userName, ageUser, positionUser, linguageProg);
+  const managerPerson = new Manager(userName, ageUser, positionUser, departmentUser, linguageProg);
+
+  developerSenior.program();
+  managerPerson.manage();
+
+});
+
+
+
+
+
 
